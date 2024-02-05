@@ -149,7 +149,7 @@ class Autoencoder(Model):
 shape = 440
 latent_dim = 32
 autoencoder = Autoencoder(latent_dim, shape)
-autoencoder.load_weights("trainingv3/cp.ckpt")
+
 autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
 
 autoencoder.fit(seq_ds,  epochs=100, validation_data=(validation_data, validation_data),callbacks=[cp_callback])
