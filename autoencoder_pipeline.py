@@ -102,7 +102,7 @@ def load_numpy_array(file_path):
     array = np.load(file_path)  # Load using np.load
     return array  # Return as a NumPy array
 import pathlib
-seq_filepath="/research/groups/thomagrp/home/common/adaptivebiotech/batchfilesnumpy/"
+seq_filepath="/data/norwaybatchfilesnumpy/"
 seqfiles =  sorted(str(p) for p in pathlib.Path(seq_filepath).glob("seq*npy"))
 
 validation_file= sorted(str(p) for p in pathlib.Path(seq_filepath).glob("seq*npy"))[100]
