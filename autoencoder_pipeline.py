@@ -116,7 +116,7 @@ seq_ds=tf.data.Dataset.from_tensor_slices(seqfiles)
 seq_ds = seq_ds.map(lambda item:tf.numpy_function(load_numpy_array,[item],tf.double))
 seq_ds=seq_ds.map(lambda x:(x,x))
 seq_ds=seq_ds.batch(1)
-checkpoint_path = "trainingv3/cp-{val_loss:0.4f}.ckpt"
+checkpoint_path = "output/trainingv3/cp-{val_loss:0.4f}.ckpt"
 checkpoint_dir = os.path.dirname(checkpoint_path)
 cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
                                                  monitor='val_loss',
