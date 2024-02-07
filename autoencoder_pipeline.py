@@ -152,5 +152,5 @@ autoencoder = Autoencoder(latent_dim, shape)
 
 autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
 
-autoencoder.fit(seq_ds,  epochs=100, validation_data=(validation_data, validation_data),callbacks=[cp_callback])
-autoencoder.save('autoencoderv2',save_format='tf')
+autoencoder.fit(seq_ds,  epochs=200, validation_data=(validation_data, validation_data),callbacks=[cp_callback])
+autoencoder.save('output/autoencoderv2',save_format='tf')
